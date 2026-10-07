@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradientes -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Filtro de resplandor -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Patrón de rejilla sutil -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+  <rect width="800" height="450" fill="url(#grid)" />
+
+  <!-- Nodos de Microservicios distribuidos (Conexiones de red) -->
+  <g stroke="#1e293b" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6">
+    <line x1="400" y1="180" x2="220" y2="110" />
+    <line x1="400" y1="180" x2="580" y2="110" />
+    <line x1="400" y1="180" x2="180" y2="240" />
+    <line x1="400" y1="180" x2="620" y2="240" />
+    <line x1="400" y1="180" x2="280" y2="330" />
+    <line x1="400" y1="180" x2="520" y2="330" />
+  </g>
+
+  <!-- Nodos periféricos -->
+  <circle cx="220" cy="110" r="6" fill="#38bdf8" opacity="0.8" />
+  <circle cx="580" cy="110" r="6" fill="#38bdf8" opacity="0.8" />
+  <circle cx="180" cy="240" r="6" fill="#34d399" opacity="0.8" />
+  <circle cx="620" cy="240" r="6" fill="#34d399" opacity="0.8" />
+  <circle cx="280" cy="330" r="5" fill="#64748b" opacity="0.5" />
+  <circle cx="520" cy="330" r="5" fill="#64748b" opacity="0.5" />
+
+  <!-- Resplandor central -->
+  <circle cx="400" cy="180" r="75" fill="#2563eb" opacity="0.15" filter="url(#glow)" />
+
+  <!-- Escudo Central / Logo (Seguridad y Antifraude) -->
+  <path d="M 400 115 
+           L 460 145 
+           V 195 
+           C 460 235 400 260 400 260 
+           C 400 260 340 235 340 195 
+           V 145 
+           Z" 
+        fill="url(#shieldGrad)" 
+        stroke="url(#primaryGrad)" 
+        stroke-width="2.5" />
+
+  <!-- Icono interno: Bóveda / Conexiones -->
+  <path d="M 375 165 H 425 V 205 H 375 Z" fill="none" stroke="#38bdf8" stroke-width="2" rx="4" />
+  <circle cx="400" cy="185" r="5" fill="#34d399" />
+  <path d="M 400 190 V 198" stroke="#34d399" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Tipografía -->
+  <text x="400" y="315" 
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+        font-size="34" 
+        font-weight="800" 
+        letter-spacing="2" 
+        fill="#f8fafc" 
+        text-anchor="middle">
+    Banc<tspan fill="#38bdf8">US</tspan>
+  </text>
+
+  <text x="400" y="345" 
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+        font-size="13" 
+        font-weight="500" 
+        letter-spacing="3" 
+        fill="#64748b" 
+        text-anchor="middle">
+    DISTRIBUTED BANKING ARCHITECTURE
+  </text>
+
+  <!-- Píldoras de tecnología inferiores -->
+  <g font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">
+    <rect x="270" y="380" width="70" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="305" y="395" fill="#94a3b8">NestJS</text>
+
+    <rect x="350" y="380" width="60" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="380" y="395" fill="#38bdf8">Redis</text>
+
+    <rect x="420" y="380" width="70" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="455" y="395" fill="#34d399">MongoDB</text>
+
+    <rect x="500" y="380" width="60" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="530" y="395" fill="#94a3b8">Docker</text>
+  </g>
+</svg>

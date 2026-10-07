@@ -1,30 +1,23 @@
-# Astro Starter Kit: Portfolio
+# Portfolio de Ángel Marín Rodríguez
 
-```sh
-npm create astro@latest -- --template portfolio
-```
+Bienvenido al repositorio de mi portfolio web personal. Aquí puedes encontrar información detallada sobre mis proyectos destacados (backend, serverless e inteligencia artificial), experiencia profesional como Software Integrator y Developer, y mi formación académica.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/portfolio/devcontainer.json)
+## Tecnologías de la Web
+Este portfolio está construido con las siguientes tecnologías frontend:
+- **Astro**
+- **TailwindCSS**
+- **DaisyUI**
+- **TypeScript / JavaScript**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Proyectos Destacados (Ver en la Web)
+- **BancUS**: Plataforma bancaria distribuida de 10 microservicios (NestJS, Nginx, Circuit Breaker).
+- **Movie Journal**: Red social Serverless para cinéfilos de coste cero y alta disponibilidad (Next.js, Supabase).
+- **AI Music Playlist Engine**: TFM de clasificación multietiqueta de emociones con IA utilizando espectrogramas y CNNs (PyTorch, FastAPI).
 
-![portfolio](https://user-images.githubusercontent.com/357379/210779178-a98f0fb7-6b1a-4068-894c-8e1403e26654.jpg)
+## Licencia y Agradecimientos (Credits)
 
-## 🧞 Commands
+Este portfolio ha sido desarrollado tomando como punto de partida la plantilla de código abierto **Astrofy**. En cumplimiento con su Licencia MIT, se otorgan los créditos correspondientes a su autor original:
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Plantilla original**: [Astrofy Template](https://astrofy-template.netlify.app/)
+- **Autor de la plantilla**: [Manuel Ernesto](https://manuelernestog.github.io/)
+- **Licencia**: MIT License

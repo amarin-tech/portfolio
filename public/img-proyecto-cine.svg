@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradientes de fondo -->
+    <linearGradient id="movieBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a12" />
+      <stop offset="50%" stop-color="#120f1d" />
+      <stop offset="100%" stop-color="#05050a" />
+    </linearGradient>
+
+    <!-- Gradiente de acento Cine / Neón -->
+    <linearGradient id="cinemaGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <!-- Gradiente para el cuerpo de la claqueta -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b2e" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f0d18" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Filtro de resplandor -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Patrón de rejilla sutil -->
+    <pattern id="cinemaGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#262238" stroke-width="0.5" stroke-opacity="0.35" />
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="800" height="450" fill="url(#movieBg)" />
+  <rect width="800" height="450" fill="url(#cinemaGrid)" />
+
+  <!-- Líneas sutiles de conexión / tracking -->
+  <g stroke="#2d2845" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.4">
+    <line x1="160" y1="80" x2="320" y2="170" />
+    <line x1="640" y1="80" x2="480" y2="170" />
+    <line x1="180" y1="280" x2="330" y2="210" />
+    <line x1="620" y1="280" x2="470" y2="210" />
+  </g>
+
+  <!-- Puntos de comunidad / valoraciones -->
+  <circle cx="160" cy="80" r="4" fill="#f59e0b" opacity="0.7" />
+  <circle cx="640" cy="80" r="4" fill="#8b5cf6" opacity="0.7" />
+  <circle cx="180" cy="280" r="4" fill="#f43f5e" opacity="0.6" />
+  <circle cx="620" cy="280" r="4" fill="#3b82f6" opacity="0.6" />
+
+  <!-- Halo de luz central detrás del logo -->
+  <circle cx="400" cy="175" r="85" fill="#f43f5e" opacity="0.12" filter="url(#softGlow)" />
+  <circle cx="400" cy="175" r="50" fill="#f59e0b" opacity="0.1" filter="url(#softGlow)" />
+
+  <!-- Claqueta / Pantalla central -->
+  <rect x="330" y="105" width="140" height="110" rx="12" fill="url(#cardGrad)" stroke="#3f385c" stroke-width="2" />
+
+  <!-- Parte superior de la claqueta (franjas en ángulo) -->
+  <path d="M 330 117 C 330 110.37 335.37 105 342 105 L 458 105 C 464.63 105 470 110.37 470 117 L 470 130 L 330 130 Z" fill="#252136" />
+  
+  <!-- Franjas diagonales de la claqueta -->
+  <g fill="#f43f5e" opacity="0.85">
+    <polygon points="348,105 358,105 348,130 338,130" />
+    <polygon points="378,105 388,105 378,130 368,130" />
+    <polygon points="408,105 418,105 408,130 398,130" />
+    <polygon points="438,105 448,105 438,130 428,130" />
+  </g>
+  <line x1="330" y1="130" x2="470" y2="130" stroke="#3f385c" stroke-width="1.5" />
+
+  <!-- Icono Play central (Gradiente Cine Neón) -->
+  <polygon points="392,152 418,168 392,184" fill="url(#cinemaGlow)" />
+
+  <!-- Estrellas / Calificaciones debajo de la pantalla -->
+  <g fill="#f59e0b" opacity="0.75" transform="translate(376, 195) scale(0.7)">
+    <polygon points="10,1 4,19 19,7 1,7 16,19" />
+    <polygon points="35,1 29,19 44,7 26,7 41,19" />
+    <polygon points="60,1 54,19 69,7 51,7 66,19" />
+  </g>
+
+  <!-- Tipografía -->
+  <text x="400" y="285" 
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+        font-size="34" 
+        font-weight="800" 
+        letter-spacing="2" 
+        fill="#f8fafc" 
+        text-anchor="middle">
+    Movie <tspan fill="url(#cinemaGlow)">Journal</tspan>
+  </text>
+
+  <text x="400" y="315" 
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+        font-size="13" 
+        font-weight="500" 
+        letter-spacing="3" 
+        fill="#94a3b8" 
+        text-anchor="middle">
+    SERVERLESS CINEMA &amp; SERIES TRACKER
+  </text>
+
+  <!-- Píldoras de tecnología inferiores -->
+  <g font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">
+    <rect x="235" y="355" width="75" height="22" rx="11" fill="#1b172a" stroke="#342d4f" stroke-width="1" />
+    <text x="272" y="370" fill="#cbd5e1">Next.js</text>
+
+    <rect x="320" y="355" width="85" height="22" rx="11" fill="#1b172a" stroke="#342d4f" stroke-width="1" />
+    <text x="362" y="370" fill="#3ecf8e">Supabase</text>
+
+    <rect x="415" y="355" width="85" height="22" rx="11" fill="#1b172a" stroke="#342d4f" stroke-width="1" />
+    <text x="457" y="370" fill="#38bdf8">PostgreSQL</text>
+
+    <rect x="510" y="355" width="75" height="22" rx="11" fill="#1b172a" stroke="#342d4f" stroke-width="1" />
+    <text x="547" y="370" fill="#f59e0b">TMDB API</text>
+  </g>
+</svg>

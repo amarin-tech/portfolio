@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Gradientes de fondo -->
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080711" />
+      <stop offset="50%" stop-color="#110d22" />
+      <stop offset="100%" stop-color="#05040a" />
+    </linearGradient>
+
+    <!-- Gradiente de acento IA / Audio (Cyan -> Púrpura -> PyTorch Orange) -->
+    <linearGradient id="aiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+
+    <!-- Gradiente para las barras de frecuencia (Mel Spectrogram) -->
+    <linearGradient id="waveGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Gradiente para el núcleo central -->
+    <linearGradient id="coreCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1530" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0d0a1a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Filtro de resplandor difuso -->
+    <filter id="neonBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Patrón de rejilla sutil de señales -->
+    <pattern id="soundGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#251e3e" stroke-width="0.5" stroke-opacity="0.35" />
+    </pattern>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="800" height="450" fill="url(#aiBg)" />
+  <rect width="800" height="450" fill="url(#soundGrid)" />
+
+  <!-- Nodos de red neuronal / conexiones laterales -->
+  <g stroke="#372b5c" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.45">
+    <line x1="160" y1="100" x2="310" y2="175" />
+    <line x1="640" y1="100" x2="490" y2="175" />
+    <line x1="180" y1="260" x2="310" y2="190" />
+    <line x1="620" y1="260" x2="490" y2="190" />
+    <line x1="400" y1="70" x2="400" y2="110" />
+  </g>
+
+  <!-- Puntos sinápticos / estados emocionales -->
+  <circle cx="160" cy="100" r="5" fill="#06b6d4" opacity="0.75" />
+  <circle cx="640" cy="100" r="5" fill="#f97316" opacity="0.75" />
+  <circle cx="180" cy="260" r="4.5" fill="#a855f7" opacity="0.65" />
+  <circle cx="620" cy="260" r="4.5" fill="#ec4899" opacity="0.65" />
+  <circle cx="400" cy="70" r="4" fill="#06b6d4" opacity="0.6" />
+
+  <!-- Resplandor central -->
+  <circle cx="400" cy="170" r="90" fill="#a855f7" opacity="0.12" filter="url(#neonBlur)" />
+  <circle cx="400" cy="170" r="50" fill="#06b6d4" opacity="0.1" filter="url(#neonBlur)" />
+
+  <!-- Contenedor central (Procesador DSP & Red Neuronal) -->
+  <rect x="310" y="105" width="180" height="120" rx="16" fill="url(#coreCardGrad)" stroke="#43356e" stroke-width="2" />
+
+  <!-- Espectrograma de Mel / Barras de ecualización central -->
+  <g transform="translate(325, 125)">
+    <!-- Barra 1 -->
+    <rect x="0" y="45" width="6" height="30" rx="3" fill="url(#waveGrad)" opacity="0.7" />
+    <!-- Barra 2 -->
+    <rect x="12" y="30" width="6" height="45" rx="3" fill="url(#waveGrad)" opacity="0.8" />
+    <!-- Barra 3 -->
+    <rect x="24" y="18" width="6" height="57" rx="3" fill="url(#waveGrad)" opacity="0.9" />
+    <!-- Barra 4 (Pico central 1) -->
+    <rect x="36" y="5" width="6" height="70" rx="3" fill="url(#waveGrad)" />
+    <!-- Barra 5 -->
+    <rect x="48" y="25" width="6" height="50" rx="3" fill="url(#waveGrad)" opacity="0.85" />
+    <!-- Barra 6 -->
+    <rect x="60" y="12" width="6" height="63" rx="3" fill="url(#waveGrad)" />
+    <!-- Barra 7 (Pico central 2) -->
+    <rect x="72" y="2" width="6" height="73" rx="3" fill="url(#waveGrad)" />
+    <!-- Barra 8 -->
+    <rect x="84" y="22" width="6" height="53" rx="3" fill="url(#waveGrad)" opacity="0.85" />
+    <!-- Barra 9 -->
+    <rect x="96" y="10" width="6" height="65" rx="3" fill="url(#waveGrad)" />
+    <!-- Barra 10 -->
+    <rect x="108" y="28" width="6" height="47" rx="3" fill="url(#waveGrad)" opacity="0.85" />
+    <!-- Barra 11 -->
+    <rect x="120" y="15" width="6" height="60" rx="3" fill="url(#waveGrad)" opacity="0.9" />
+    <!-- Barra 12 -->
+    <rect x="132" y="35" width="6" height="40" rx="3" fill="url(#waveGrad)" opacity="0.8" />
+    <!-- Barra 13 -->
+    <rect x="144" y="50" width="6" height="25" rx="3" fill="url(#waveGrad)" opacity="0.7" />
+  </g>
+
+  <!-- Línea de onda continua que cruza las frecuencias -->
+  <path d="M 325 168 Q 355 130 385 168 T 445 168 T 475 168" fill="none" stroke="#06b6d4" stroke-width="1.8" opacity="0.9" />
+
+  <!-- Tipografía -->
+  <text x="400" y="285" 
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+        font-size="34" 
+        font-weight="800" 
+        letter-spacing="2" 
+        fill="#f8fafc" 
+        text-anchor="middle">
+    AI Playlist <tspan fill="url(#aiGlow)">Engine</tspan>
+  </text>
+
+  <text x="400" y="315" 
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+        font-size="13" 
+        font-weight="500" 
+        letter-spacing="3" 
+        fill="#94a3b8" 
+        text-anchor="middle">
+    AUDIO DSP &amp; DEEP LEARNING INFERENCE
+  </text>
+
+  <!-- Píldoras de tecnología inferiores -->
+  <g font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">
+    <rect x="230" y="355" width="75" height="22" rx="11" fill="#181329" stroke="#3b2f5c" stroke-width="1" />
+    <text x="267" y="370" fill="#059669">FastAPI</text>
+
+    <rect x="315" y="355" width="80" height="22" rx="11" fill="#181329" stroke="#3b2f5c" stroke-width="1" />
+    <text x="355" y="370" fill="#f97316">PyTorch</text>
+
+    <rect x="405" y="355" width="80" height="22" rx="11" fill="#181329" stroke="#3b2f5c" stroke-width="1" />
+    <text x="445" y="370" fill="#a855f7">Librosa</text>
+
+    <rect x="495" y="355" width="75" height="22" rx="11" fill="#181329" stroke="#3b2f5c" stroke-width="1" />
+    <text x="532" y="370" fill="#38bdf8">Docker</text>
+  </g>
+</svg>

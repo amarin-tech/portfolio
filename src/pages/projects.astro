@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectAccordion from "../components/ProjectAccordion.astro";
+---
+
+<BaseLayout title = "Proyectos" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Proyectos Destacados</div>
+  </div>
+
+  <ProjectAccordion
+    id="bancus"
+    title="BancUS — Sistema Bancario Distribuido"
+    img="/img-proyecto-bancus.svg"
+    badge="Backend"
+    shortDesc="Plataforma bancaria online de 10 microservicios comunicados vía REST con Nginx como API Gateway. (NestJS, Redis, MongoDB, Circuit Breaker)."
+    longDesc="BancUS es un sistema bancario distribuido que simula operaciones financieras en tiempo real. La arquitectura se basa en 10 microservicios independientes que se comunican síncronamente mediante REST, con un API Gateway (Nginx) actuando como proxy inverso, el cual se apoya en el microservicio de Autenticación y Usuarios para la gestión y validación de tokens JWT.\n\nEn un equipo de 10 personas organizado por parejas, desarrollé íntegramente el **Microservicio de Antifraude** (NestJS, MongoDB) y colaboré en el de Autenticación. Implementé patrones avanzados de resiliencia como **Circuit Breaker** (Opossum) para aislar fallos, una estrategia **Cache-Aside con Redis** para optimizar el historial transaccional, y una **Materialized View** para acelerar drásticamente el acceso a datos sin saturar otros servicios."
+    githubUrl="https://github.com/BancUS-FISProject"
+    images={[]}
+  />
+  <ProjectAccordion
+    id="movie-journal"
+    title="Movie Journal"
+    img="/img-proyecto-cine.svg"
+    badge="Serverless"
+    shortDesc="Aplicación web Serverless diseñada para alta disponibilidad y coste cero. (Next.js, Supabase, PostgreSQL)."
+    longDesc="Movie Journal es una aplicación web diseñada a modo de red social para que mis amigos puedan llevar un registro de las películas y series que consumen, puntuarlas y compartir opiniones.\n\nEl objetivo principal desde el punto de vista arquitectónico fue desarrollar una **plataforma de coste cero y alta disponibilidad** que no requiriese mantenimiento activo. Para lograrlo, opté por una infraestructura puramente **Serverless** utilizando **Next.js** en el frontend y **Supabase** (PostgreSQL + Auth) como Backend-as-a-Service, garantizando que la aplicación esté siempre online para los usuarios sin incurrir en costes de servidores dedicados."
+    githubUrl="https://github.com/amarin-tech/movie-journal.git"
+    images={[]}
+  />
+  <ProjectAccordion
+    id="playlist"
+    title="AI Music Playlist Engine (TFM)"
+    img="/img-proyecto-musica.svg"
+    badge="AI / Machine Learning"
+    shortDesc="Motor de IA para reconocimiento multietiqueta de emociones musicales mediante espectrogramas. (PyTorch, FastAPI, React)."
+    longDesc="Este Trabajo de Fin de Máster es un motor de inteligencia artificial diseñado para generar listas de reproducción dinámicas adaptadas al estado emocional del usuario.\n\nA nivel de Machine Learning, el proyecto destaca por una exhaustiva **evaluación comparativa de 10 arquitecturas neuronales** (CNNs, BiLSTMs, Self-Attention y Transfer Learning). Finalmente, opté por diseñar una **CNN custom de alta eficiencia y bajo peso** (no fundacional) que superó a los modelos más complejos en agilidad y consumo de memoria. Para esquivar los cuellos de botella de hardware en la nube, diseñé un **pipeline de procesamiento paralelo local** que aplica Data Augmentation, empaqueta el dataset y lo entrena en Google Colab con mecanismos de **Checkpointing automático** para tolerancia a caídas.\n\nA nivel de Ingeniería de Software, desarrollé una aplicación web (React) para interactuar con los **3 mejores modelos predictivos** resultantes del estudio. El sistema se apoya en una **arquitectura backend Stateless con FastAPI**, que descarga temporalmente el audio de la API de Jamendo, realiza la inferencia en tiempo real y descarta el archivo al instante para evadir contratiempos derivados del almacenamiento."
+    githubUrl="https://github.com/amarin-tech/tfm-playlist-inteligente"
+    images={[]}
+  />
+</BaseLayout>
+
+<script>
+  function openTargetAccordion() {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target && target.tagName === 'DETAILS') {
+        target.open = true;
+        setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }
+  
+  // Run on initial load
+  window.addEventListener('DOMContentLoaded', openTargetAccordion);
+  // Run on hash change (if they click it while already on the page)
+  window.addEventListener('hashchange', openTargetAccordion);
+  // Run on Astro view transitions
+  document.addEventListener('astro:page-load', openTargetAccordion);
+</script>

@@ -1,0 +1,187 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Currículum | Ángel Marín Rodríguez" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Perfil</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Ingeniero de software especializado en el desarrollo de servicios backend robustos con Java y Spring Boot, arquitecturas distribuidas de microservicios y soluciones serverless. Con experiencia en entorno profesional y máster en ingeniería del software.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Trayectoria</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Máster en Ingeniería del Software - Cloud, Datos y Gestión TI"
+      subtitle="Universidad de Sevilla | 2025 - 2026"
+      type="education"
+    />
+
+    <TimeLineElement
+      title="Software Integrator"
+      subtitle="Edicom | 2025"
+      type="work"
+    >
+      Gestión, adaptación y soporte técnico de soluciones de software propietarias (Ediwin, Ipaas, Ebimap), asegurando el encaje técnico y la estabilidad de los flujos de trabajo B2B.
+      <details class="mt-3 group marker:content-['']">
+        <summary class="list-none cursor-pointer inline-flex items-center gap-2 font-semibold text-sm text-primary bg-primary/10 px-4 py-2 rounded-lg hover:bg-primary/20 transition-all active:scale-95 select-none mt-1">
+          <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <span class="group-open:hidden">Ver responsabilidades en detalle</span>
+          <span class="hidden group-open:inline">Ocultar detalles</span>
+        </summary>
+        <ul class="mt-4 space-y-3 pb-1 ml-5">
+          <li class="flex gap-3 items-start text-base-content/80">
+            <svg class="w-2 h-2 text-primary shrink-0 mt-2" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
+            <span>Resolución de incidencias, despliegue de migraciones y actualización de configuraciones en los dominios de los clientes, garantizando la integridad de los sistemas tras cada cambio.</span>
+          </li>
+          <li class="flex gap-3 items-start text-base-content/80">
+            <svg class="w-2 h-2 text-primary shrink-0 mt-2" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
+            <span>Monitorización activa en la nube y análisis profundo de logs centralizados mediante <strong>Elastic</strong> para la depuración y detección temprana de anomalías.</span>
+          </li>
+          <li class="flex gap-3 items-start text-base-content/80">
+            <svg class="w-2 h-2 text-primary shrink-0 mt-2" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
+            <span>Soporte técnico directo y consultoría tecnológica con clientes de múltiples nacionalidades a través de correo y videollamadas, con comunicación fluida bilingüe (<strong>inglés y español</strong>).</span>
+          </li>
+          <li class="flex gap-3 items-start text-base-content/80">
+            <svg class="w-2 h-2 text-primary shrink-0 mt-2" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
+            <span>Trabajo bajo metodologías ágiles, coordinando operaciones mediante dashboards internos, reuniones diarias (<i>dailies</i>) y revisiones semanales (<i>weeklies</i>).</span>
+          </li>
+        </ul>
+      </details>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Intern Software Developer"
+      subtitle="Copyright Clearance Center (CCC) | 2024"
+      type="work"
+    >
+      Desarrollo de soluciones Backend para uno de los proyectos de mayor escala e impacto de la compañía, asumiendo la revisión de endpoints y resolución de bugs bajo la supervisión directa de un tutor técnico.
+      <details class="mt-3 group marker:content-['']">
+        <summary class="list-none cursor-pointer inline-flex items-center gap-2 font-semibold text-sm text-primary bg-primary/10 px-4 py-2 rounded-lg hover:bg-primary/20 transition-all active:scale-95 select-none mt-1">
+          <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <span class="group-open:hidden">Ver responsabilidades en detalle</span>
+          <span class="hidden group-open:inline">Ocultar detalles</span>
+        </summary>
+        <ul class="mt-4 space-y-3 pb-1 ml-5">
+          <li class="flex gap-3 items-start text-base-content/80">
+            <svg class="w-2 h-2 text-primary shrink-0 mt-2" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
+            <span>Desarrollo y mantenimiento de microservicios con <strong>Java</strong>, <strong>Spring</strong> e <strong>Hibernate</strong> sobre bases de datos SQL, gestionando el despliegue con <strong>Docker</strong>.</span>
+          </li>
+          <li class="flex gap-3 items-start text-base-content/80">
+            <svg class="w-2 h-2 text-primary shrink-0 mt-2" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
+            <span>Integración y enrutamiento de mensajería entre microservicios utilizando <strong>Apache Camel</strong>.</span>
+          </li>
+          <li class="flex gap-3 items-start text-base-content/80">
+            <svg class="w-2 h-2 text-primary shrink-0 mt-2" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
+            <span>Aseguramiento de la calidad mediante pruebas unitarias y de integración como verificación técnica previa al entorno de producción.</span>
+          </li>
+          <li class="flex gap-3 items-start text-base-content/80">
+            <svg class="w-2 h-2 text-primary shrink-0 mt-2" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
+            <span>Colaboración activa en un equipo internacional, operando 100% en <strong>inglés</strong>.</span>
+          </li>
+          <li class="flex gap-3 items-start text-base-content/80">
+            <svg class="w-2 h-2 text-primary shrink-0 mt-2" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" /></svg>
+            <span>Trabajo bajo metodología <strong>Agile/Scrum</strong>, gestionando tareas y sprints a través de dashboards en Jira.</span>
+          </li>
+        </ul>
+      </details>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Grado en Ingeniería Informática – Tecnologías Informáticas"
+      subtitle="Universidad de Sevilla | 2019 - 2024"
+      type="education"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Stack Tecnológico</div>
+  </div>
+
+  <div class="flex flex-wrap gap-3 mt-4 mb-10">
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="w-5 h-5 mt-0.5" alt="Java"/> <span class="leading-none">Java</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" class="w-5 h-5 mt-0.5" alt="Spring"/> <span class="leading-none">Spring Boot</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="w-5 h-5 mt-0.5" alt="Python"/> <span class="leading-none">Python</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" class="w-5 h-5 mt-0.5" alt="FastAPI"/> <span class="leading-none">FastAPI</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="w-5 h-5 mt-0.5" alt="JavaScript"/> <span class="leading-none">JavaScript</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="w-5 h-5 mt-0.5" alt="TypeScript"/> <span class="leading-none">TypeScript</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" class="w-5 h-5 mt-0.5" alt="Node.js"/> <span class="leading-none">Node.js</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" class="w-5 h-5 mt-0.5" alt="NestJS"/> <span class="leading-none">NestJS</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="w-5 h-5 mt-0.5" alt="PostgreSQL"/> <span class="leading-none">PostgreSQL</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" class="w-5 h-5 mt-0.5" alt="MongoDB"/> <span class="leading-none">MongoDB</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" class="w-5 h-5 mt-0.5" alt="Redis"/> <span class="leading-none">Redis</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="w-5 h-5 mt-0.5" alt="Docker"/> <span class="leading-none">Docker</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="w-5 h-5 mt-0.5" alt="AWS"/> <span class="leading-none">AWS</span>
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="w-5 h-5 mt-0.5" alt="Git"/> <span class="leading-none">Git</span>
+    </span>
+  </div>
+
+  <div class="mb-5 mt-10">
+    <div class="text-3xl w-full font-bold">Desarrollo con IA</div>
+  </div>
+
+  <div class="mb-6 text-justify">
+    Integración y desarrollo de flujos de trabajo asistidos por IA.
+  </div>
+
+  <div class="flex flex-wrap gap-3 mb-10">
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2 font-semibold">
+      <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+      Model Context Protocol (MCP)
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2 font-semibold">
+      <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+      Agentic Skills & Workflows
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2 font-semibold">
+      <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+      Spec-Driven Development
+    </span>
+    <span class="badge badge-outline border-2 rounded-xl py-4 px-3 flex items-center gap-2 font-semibold">
+      <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+      LLMs (Claude, Gemini, ChatGPT, openCode)
+    </span>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Idiomas</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>Inglés (C1 - Competencia profesional completa)</li>
+    <li>Español (Nativo)</li>
+  </ul>
+</BaseLayout>
