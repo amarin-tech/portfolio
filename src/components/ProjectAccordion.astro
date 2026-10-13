@@ -39,7 +39,18 @@ const { id, title, img, shortDesc, longDesc, githubUrl, badge, images = [] } = A
         <div class="carousel carousel-center max-w-full p-4 space-x-4 bg-base-200 rounded-2xl">
           {images.map((image) => (
             <div class="carousel-item">
-              <img src={image} class="rounded-xl h-48 md:h-64 object-cover shadow-sm border border-base-300" alt={`Screenshot of ${title}`} />
+              <button
+                type="button"
+                class="cursor-zoom-in group/img relative focus:outline-none rounded-xl overflow-hidden text-left"
+                onclick={`window.openImageLightbox && window.openImageLightbox('${image}')`}
+                title="Haz clic para ampliar"
+              >
+                <img
+                  src={image}
+                  class="rounded-xl h-48 md:h-64 object-cover shadow-sm border border-base-300 transition-transform duration-300 group-hover/img:scale-[1.02]"
+                  alt={`Screenshot of ${title}`}
+                />
+              </button>
             </div>
           ))}
         </div>
