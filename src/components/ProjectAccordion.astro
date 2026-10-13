@@ -38,16 +38,16 @@ const { id, title, img, shortDesc, longDesc, githubUrl, badge, images = [] } = A
       {images.length > 0 ? (
         <div class="carousel carousel-center max-w-full p-4 space-x-4 bg-base-200 rounded-2xl">
           {images.map((image) => (
-            <div class="carousel-item">
+            <div class="carousel-item max-w-full flex justify-center">
               <button
                 type="button"
-                class="cursor-zoom-in group/img relative focus:outline-none rounded-xl overflow-hidden text-left"
+                class="cursor-zoom-in group/img relative focus:outline-none rounded-xl overflow-hidden text-left max-w-full"
                 onclick={`window.openImageLightbox && window.openImageLightbox('${image}')`}
                 title="Haz clic para ampliar"
               >
                 <img
                   src={image}
-                  class="rounded-xl h-48 md:h-64 object-cover shadow-sm border border-base-300 transition-transform duration-300 group-hover/img:scale-[1.02]"
+                  class="rounded-xl max-h-48 md:max-h-64 w-auto max-w-full object-contain shadow-sm border border-base-300 bg-base-100 transition-transform duration-300 group-hover/img:scale-[1.02]"
                   alt={`Screenshot of ${title}`}
                 />
               </button>
